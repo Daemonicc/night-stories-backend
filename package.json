@@ -36,14 +36,15 @@
 	},
 	"scripts": {
 		"test": "./node_modules/.bin/cross-env NODE_ENV=test ./node_modules/.bin/mocha ./test/**/*.spec.js --exit",
+		"start": "npm run dev",
 		"test-watch": "nodemon --exec 'npm test'",
 		"coverage": "./node_modules/.bin/cross-env NODE_ENV=test nyc ./node_modules/.bin/mocha ./test/**/*.spec.js --exit",
 		"testenv": "./node_modules/.bin/cross-env NODE_ENV=test node ./src/app.js",
 		"dev": "./node_modules/.bin/cross-env NODE_ENV=development nodemon ./src/app.js",
 		"debug": "DEBUG=* node ./src/app.js",
 		"lint": "eslint src/**/*.js",
-		"lint:fix": "eslint src/**/*.js  --fix",
-		"start": "npm run dev"
+		"lint:fix": "eslint src/**/*.js  --fix"
+		
 	},
 	"repository": {
 		"type": "git",
